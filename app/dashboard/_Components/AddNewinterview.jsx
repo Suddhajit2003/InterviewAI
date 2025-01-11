@@ -58,7 +58,7 @@ async function AddNewInterview() {
         .replace("```", "")
         .trim();
       const parsedJSON = JSON.parse(rawResponse);
-      await insertValues(values);
+      await insertValues(...values);
     } catch (error) {
       console.error("Error:", error);
       throw error;
